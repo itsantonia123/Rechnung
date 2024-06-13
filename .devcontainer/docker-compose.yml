@@ -6,9 +6,6 @@ services:
       context: .
       dockerfile: Dockerfile
 
-    ports:
-    - '8080:8080'
-
     volumes:
       - ../..:/workspaces:cached
     
@@ -31,8 +28,6 @@ services:
     restart: unless-stopped
     volumes:
       - postgres-data:/var/lib/postgresql/data
-    ports:
-    - '5432:5432'
     environment:
       POSTGRES_PASSWORD: postgres
       POSTGRES_USER: postgres
