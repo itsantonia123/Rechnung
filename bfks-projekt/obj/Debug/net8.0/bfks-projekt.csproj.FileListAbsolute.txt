@@ -57,3 +57,23 @@ C:/Users/anschulz/OneDrive - adesso Group/Dokumente/Schule/Lehrjahr2/BfK-S/proje
 C:/Users/anschulz/OneDrive - adesso Group/Dokumente/Schule/Lehrjahr2/BfK-S/projekt-rechnung-sql/bfks-projekt/obj/Debug/net8.0/ref/bfks-projekt.dll
 C:/Users/anschulz/OneDrive - adesso Group/Dokumente/Schule/Lehrjahr2/BfK-S/projekt-rechnung-sql/bfks-projekt/obj/Debug/net8.0/bfks-projekt.sourcelink.json
 /workspaces/projekt-rechnung-sql/bfks-projekt/obj/Debug/net8.0/bfks-projekt.sourcelink.json
+C:\Users\anschulz\OneDrive - adesso Group\Dokumente\Schule\Lehrjahr2\BfK-S\projekt-rechnung-sql\bfks-projekt\bin\Debug\net8.0\bfks-projekt.exe
+C:\Users\anschulz\OneDrive - adesso Group\Dokumente\Schule\Lehrjahr2\BfK-S\projekt-rechnung-sql\bfks-projekt\bin\Debug\net8.0\bfks-projekt.deps.json
+C:\Users\anschulz\OneDrive - adesso Group\Dokumente\Schule\Lehrjahr2\BfK-S\projekt-rechnung-sql\bfks-projekt\bin\Debug\net8.0\bfks-projekt.runtimeconfig.json
+C:\Users\anschulz\OneDrive - adesso Group\Dokumente\Schule\Lehrjahr2\BfK-S\projekt-rechnung-sql\bfks-projekt\bin\Debug\net8.0\bfks-projekt.dll
+C:\Users\anschulz\OneDrive - adesso Group\Dokumente\Schule\Lehrjahr2\BfK-S\projekt-rechnung-sql\bfks-projekt\bin\Debug\net8.0\bfks-projekt.pdb
+C:\Users\anschulz\OneDrive - adesso Group\Dokumente\Schule\Lehrjahr2\BfK-S\projekt-rechnung-sql\bfks-projekt\bin\Debug\net8.0\Microsoft.Extensions.DependencyInjection.Abstractions.dll
+C:\Users\anschulz\OneDrive - adesso Group\Dokumente\Schule\Lehrjahr2\BfK-S\projekt-rechnung-sql\bfks-projekt\bin\Debug\net8.0\Microsoft.Extensions.Logging.Abstractions.dll
+C:\Users\anschulz\OneDrive - adesso Group\Dokumente\Schule\Lehrjahr2\BfK-S\projekt-rechnung-sql\bfks-projekt\bin\Debug\net8.0\Npgsql.dll
+C:\Users\anschulz\OneDrive - adesso Group\Dokumente\Schule\Lehrjahr2\BfK-S\projekt-rechnung-sql\bfks-projekt\obj\Debug\net8.0\bfks-projekt.csproj.AssemblyReference.cache
+C:\Users\anschulz\OneDrive - adesso Group\Dokumente\Schule\Lehrjahr2\BfK-S\projekt-rechnung-sql\bfks-projekt\obj\Debug\net8.0\bfks-projekt.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\anschulz\OneDrive - adesso Group\Dokumente\Schule\Lehrjahr2\BfK-S\projekt-rechnung-sql\bfks-projekt\obj\Debug\net8.0\bfks-projekt.AssemblyInfoInputs.cache
+C:\Users\anschulz\OneDrive - adesso Group\Dokumente\Schule\Lehrjahr2\BfK-S\projekt-rechnung-sql\bfks-projekt\obj\Debug\net8.0\bfks-projekt.AssemblyInfo.cs
+C:\Users\anschulz\OneDrive - adesso Group\Dokumente\Schule\Lehrjahr2\BfK-S\projekt-rechnung-sql\bfks-projekt\obj\Debug\net8.0\bfks-projekt.csproj.CoreCompileInputs.cache
+C:\Users\anschulz\OneDrive - adesso Group\Dokumente\Schule\Lehrjahr2\BfK-S\projekt-rechnung-sql\bfks-projekt\obj\Debug\net8.0\bfks-projekt.sourcelink.json
+C:\Users\anschulz\OneDrive - adesso Group\Dokumente\Schule\Lehrjahr2\BfK-S\projekt-rechnung-sql\bfks-projekt\obj\Debug\net8.0\bfks-pro.3B4BB22A.Up2Date
+C:\Users\anschulz\OneDrive - adesso Group\Dokumente\Schule\Lehrjahr2\BfK-S\projekt-rechnung-sql\bfks-projekt\obj\Debug\net8.0\bfks-projekt.dll
+C:\Users\anschulz\OneDrive - adesso Group\Dokumente\Schule\Lehrjahr2\BfK-S\projekt-rechnung-sql\bfks-projekt\obj\Debug\net8.0\refint\bfks-projekt.dll
+C:\Users\anschulz\OneDrive - adesso Group\Dokumente\Schule\Lehrjahr2\BfK-S\projekt-rechnung-sql\bfks-projekt\obj\Debug\net8.0\bfks-projekt.pdb
+C:\Users\anschulz\OneDrive - adesso Group\Dokumente\Schule\Lehrjahr2\BfK-S\projekt-rechnung-sql\bfks-projekt\obj\Debug\net8.0\bfks-projekt.genruntimeconfig.cache
+C:\Users\anschulz\OneDrive - adesso Group\Dokumente\Schule\Lehrjahr2\BfK-S\projekt-rechnung-sql\bfks-projekt\obj\Debug\net8.0\ref\bfks-projekt.dll

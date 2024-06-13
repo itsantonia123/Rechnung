@@ -330,7 +330,7 @@ class Program
                 <tr>
                     <td colspan=""4"" class=""no-border""></td>
                     <td>19% MwSt</td>
-                    <td>" + mwst + @" €</td>
+                    <td>" + mwst + @" </td>
                 </tr>
                 <tr>
                     <td colspan=""4"" class=""no-border""></td>
