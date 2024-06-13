@@ -20,12 +20,12 @@ class Program
 
     static void InitTables()
     {
-        RunFromFile("sql-cmds/inittables.sql");
+        RunFromFile("sql-cmds/init.sql");
     }
 
     static void InsertSampleData()
     {
-        RunFromFile("sql-cmds/sampledata.sql");
+        RunFromFile("sql-cmds/sample.sql");
     }
     static Dictionary<string, Dictionary<string, object>> GetPositionen(int auftragsNr)
     {
@@ -119,22 +119,64 @@ class Program
         return artikelName;
     }
 
-    static char GetKontoNr(int verkaeuferId)
+    static Dictionary<string, Dictionary<string, object>> GetVerkaeufer(int verkaeuferId)
     {
         var conn = new NpgsqlConnection(connectionString);
         conn.Open();
 
-        var cmd = new NpgsqlCommand("SELECT kontonr FROM artikel WHERE " + verkaeuferId + " = @verkaeuferid", conn);
+        var cmd = new NpgsqlCommand("SELECT * FROM position WHERE " + verkaeuferId + " = @verkaeuferid", conn);
         cmd.Parameters.AddWithValue("verkaeuferid", verkaeuferId);
 
+        var dict = new Dictionary<string, Dictionary<string, object>>();
+
         var reader = cmd.ExecuteReader();
-        
-        char kontoNr = reader.GetChar(0);
+        var enumerator = reader.GetEnumerator();
+        while (enumerator.MoveNext())
+        {
+            //reader.Read();
+            var subdict = new Dictionary<string, object>();
+            for (int i = 0; i < reader.FieldCount; i++)
+            {
+                var name = reader.GetName(i);
+                var value = reader.GetValue(i);
+
+                subdict.Add(name, value);
+            }
+#pragma warning disable CS8604 // Possible null reference argument.
+            //dict.Add(reader["verkaeuferid"].ToString(), subdict);
+#pragma warning restore CS8604 // Possible null reference argument.
+        }
 
         conn.Close();
 
-        return kontoNr;
+        return dict;
     }
+/*
+    static Dictionary<string, object> GetKontoNr(string table, string pkFieldName, int pkValue)
+    {
+        var conn = new NpgsqlConnection(connectionString);
+        conn.Open();
+
+        var cmd = new NpgsqlCommand("SELECT * FROM " + table + " WHERE " + pkFieldName + " = @pkValue", conn);
+        cmd.Parameters.AddWithValue("pkValue", pkValue);
+
+        var reader = cmd.ExecuteReader();
+        reader.Read();
+
+        var dict = new Dictionary<string, object>();
+        for (int i = 0; i < reader.FieldCount; i++)
+        {
+            var name = reader.GetName(i);
+            var value = reader.GetValue(i);
+
+            dict.Add(name, value);
+        }
+
+        conn.Close();
+
+        return dict;
+    }
+    */
 
     static void RunFromFile(string filePath)
     {
@@ -304,14 +346,24 @@ class Program
         <p>Zahlungsvermerk: " + rechnung["zahlungsvermerkung"] + @"<br>Zahlbar bis " + rechnung["fälligkeitsdatum"] + @"</p>";
 
         // Build footer
-        
         int verkaeuferId = (int)rechnung["verkaeuferid"];
-        char kontoNr = GetKontoNr(verkaeuferId);
+        var verkaeufer = GetVerkaeufer(verkaeuferId);
+        //char kontoNr = GetKontoNr(verkaeuferId);
+        
+        foreach (var verkaeuferKvp in verkaeufer)
+        {
+            var verkaeuferKey = verkaeuferKvp.Key;
+            int artikelnummer = (int)verkaeuferKvp.Value["artikelnr"];
+            var menge = verkaeuferKvp.Value["menge"];
+            var gesamtpreis = verkaeuferKvp.Value["gesamtpreis"];
+            String artikelname = GetArtikelname(artikelnummer);
+            double einzelpreis = GetEinzelpreis(artikelnummer);
+            
         html += @"
         <div class=""footer"">
-            <p>Bankname: Deutsche Bank<br>Konto: " + kontoNr + @"<br>BLZ: " + rechnung["blz"] + @"<br>Steuernummer: " + rechnung["steuernummer"] + @"<br>US-ID-Nr: " + rechnung["ustidnr"] + @"<br>Amtsgericht " + rechnung["amtsgericht"] + @"<br>HBR " + rechnung["hbr"] + @"<br>Firmensitz: Neuheim<br>" + rechnung["straße"] + @", 75175 Neuheim<br>Tel.: " + rechnung["telefon"] + @"<br>Fax: " + rechnung["fax"] + @"<br>Geschäftsführung: " + rechnung["geschäftsführung"] + @"</p>
+            <p>Bankname: Deutsche Bank<br>Konto: " + verkaeufer["kontonr"] + @"<br>BLZ: " + verkaeufer["blz"] + @"<br>Steuernummer: " + verkaeufer["steuernummer"] + @"<br>US-ID-Nr: " + verkaeufer["ustidnr"] + @"<br>Amtsgericht " + verkaeufer["amtsgericht"] + @"<br>HBR " + verkaeufer["hbr"] + @"<br>Firmensitz: Neuheim<br>" + verkaeufer["straße"] + @", 75175 Neuheim<br>Tel.: " + verkaeufer["telefon"] + @"<br>Fax: " + verkaeufer["fax"] + @"<br>Geschäftsführung: " + verkaeufer["geschäftsführung"] + @"</p>
         </div>";
-        
+        }        
 
         html += @"
     </body>
@@ -319,6 +371,6 @@ class Program
 
         System.IO.File.WriteAllText("auftrag.html", html);
 
-        conn.Close();
+        //conn.Close();
     }
 }
