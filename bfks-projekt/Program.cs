@@ -304,15 +304,14 @@ class Program
         <p>Zahlungsvermerk: " + rechnung["zahlungsvermerkung"] + @"<br>Zahlbar bis " + rechnung["fälligkeitsdatum"] + @"</p>";
 
         // Build footer
-        foreach (var positionKvp in positionen)
-        {
-            int verkaeuferId = (int)positionKvp.Value["verkäuferid"];
-            char kontoNr = GetKontoNr(verkaeuferId);
-            html += @"
-            <div class=""footer"">
-                <p>Bankname: Deutsche Bank<br>Konto: " + kontoNr + @"<br>BLZ: " + rechnung["blz"] + @"<br>Steuernummer: " + rechnung["steuernummer"] + @"<br>US-ID-Nr: " + rechnung["ustidnr"] + @"<br>Amtsgericht " + rechnung["amtsgericht"] + @"<br>HBR " + rechnung["hbr"] + @"<br>Firmensitz: Neuheim<br>" + rechnung["straße"] + @", 75175 Neuheim<br>Tel.: " + rechnung["telefon"] + @"<br>Fax: " + rechnung["fax"] + @"<br>Geschäftsführung: " + rechnung["geschäftsführung"] + @"</p>
-            </div>";
-        }
+        
+        int verkaeuferId = (int)rechnung["verkaeuferid"];
+        char kontoNr = GetKontoNr(verkaeuferId);
+        html += @"
+        <div class=""footer"">
+            <p>Bankname: Deutsche Bank<br>Konto: " + kontoNr + @"<br>BLZ: " + rechnung["blz"] + @"<br>Steuernummer: " + rechnung["steuernummer"] + @"<br>US-ID-Nr: " + rechnung["ustidnr"] + @"<br>Amtsgericht " + rechnung["amtsgericht"] + @"<br>HBR " + rechnung["hbr"] + @"<br>Firmensitz: Neuheim<br>" + rechnung["straße"] + @", 75175 Neuheim<br>Tel.: " + rechnung["telefon"] + @"<br>Fax: " + rechnung["fax"] + @"<br>Geschäftsführung: " + rechnung["geschäftsführung"] + @"</p>
+        </div>";
+        
 
         html += @"
     </body>

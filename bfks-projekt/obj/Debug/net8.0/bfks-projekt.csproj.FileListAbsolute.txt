@@ -55,3 +55,4 @@ C:\Users\anschulz\OneDrive - adesso Group\Dokumente\Schule\Lehrjahr2\BfK-S\proje
 C:\Users\anschulz\OneDrive - adesso Group\Dokumente\Schule\Lehrjahr2\BfK-S\projekt-rechnung-sql\bfks-projekt\obj\Debug\net8.0\bfks-projekt.pdb
 C:\Users\anschulz\OneDrive - adesso Group\Dokumente\Schule\Lehrjahr2\BfK-S\projekt-rechnung-sql\bfks-projekt\obj\Debug\net8.0\bfks-projekt.genruntimeconfig.cache
 C:\Users\anschulz\OneDrive - adesso Group\Dokumente\Schule\Lehrjahr2\BfK-S\projekt-rechnung-sql\bfks-projekt\obj\Debug\net8.0\ref\bfks-projekt.dll
+C:\Users\anschulz\OneDrive - adesso Group\Dokumente\Schule\Lehrjahr2\BfK-S\projekt-rechnung-sql\bfks-projekt\obj\Debug\net8.0\bfks-projekt.sourcelink.json
