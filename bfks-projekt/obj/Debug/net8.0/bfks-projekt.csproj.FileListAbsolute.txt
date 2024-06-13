@@ -1,0 +1,57 @@
+/workspaces/dotnet-postgres/bfks-projekt/bin/Debug/net8.0/bfks-projekt
+/workspaces/dotnet-postgres/bfks-projekt/bin/Debug/net8.0/bfks-projekt.deps.json
+/workspaces/dotnet-postgres/bfks-projekt/bin/Debug/net8.0/bfks-projekt.runtimeconfig.json
+/workspaces/dotnet-postgres/bfks-projekt/bin/Debug/net8.0/bfks-projekt.dll
+/workspaces/dotnet-postgres/bfks-projekt/bin/Debug/net8.0/bfks-projekt.pdb
+/workspaces/dotnet-postgres/bfks-projekt/obj/Debug/net8.0/bfks-projekt.GeneratedMSBuildEditorConfig.editorconfig
+/workspaces/dotnet-postgres/bfks-projekt/obj/Debug/net8.0/bfks-projekt.AssemblyInfoInputs.cache
+/workspaces/dotnet-postgres/bfks-projekt/obj/Debug/net8.0/bfks-projekt.AssemblyInfo.cs
+/workspaces/dotnet-postgres/bfks-projekt/obj/Debug/net8.0/bfks-projekt.csproj.CoreCompileInputs.cache
+/workspaces/dotnet-postgres/bfks-projekt/obj/Debug/net8.0/bfks-projekt.dll
+/workspaces/dotnet-postgres/bfks-projekt/obj/Debug/net8.0/refint/bfks-projekt.dll
+/workspaces/dotnet-postgres/bfks-projekt/obj/Debug/net8.0/bfks-projekt.pdb
+/workspaces/dotnet-postgres/bfks-projekt/obj/Debug/net8.0/bfks-projekt.genruntimeconfig.cache
+/workspaces/dotnet-postgres/bfks-projekt/obj/Debug/net8.0/ref/bfks-projekt.dll
+/workspaces/dotnet-postgres/bfks-projekt/bin/Debug/net8.0/Microsoft.Extensions.DependencyInjection.Abstractions.dll
+/workspaces/dotnet-postgres/bfks-projekt/bin/Debug/net8.0/Microsoft.Extensions.Logging.Abstractions.dll
+/workspaces/dotnet-postgres/bfks-projekt/bin/Debug/net8.0/Npgsql.dll
+/workspaces/dotnet-postgres/bfks-projekt/obj/Debug/net8.0/bfks-projekt.csproj.AssemblyReference.cache
+/workspaces/dotnet-postgres/bfks-projekt/obj/Debug/net8.0/bfks-pro.3B4BB22A.Up2Date
+/workspaces/projekt-rechnung-sql/bfks-projekt/obj/Debug/net8.0/bfks-projekt.csproj.AssemblyReference.cache
+/workspaces/projekt-rechnung-sql/bfks-projekt/obj/Debug/net8.0/bfks-projekt.GeneratedMSBuildEditorConfig.editorconfig
+/workspaces/projekt-rechnung-sql/bfks-projekt/obj/Debug/net8.0/bfks-projekt.AssemblyInfoInputs.cache
+/workspaces/projekt-rechnung-sql/bfks-projekt/obj/Debug/net8.0/bfks-projekt.AssemblyInfo.cs
+/workspaces/projekt-rechnung-sql/bfks-projekt/obj/Debug/net8.0/bfks-projekt.csproj.CoreCompileInputs.cache
+/workspaces/projekt-rechnung-sql/bfks-projekt/obj/Debug/net8.0/bfks-projekt.dll
+/workspaces/projekt-rechnung-sql/bfks-projekt/obj/Debug/net8.0/refint/bfks-projekt.dll
+/workspaces/projekt-rechnung-sql/bfks-projekt/obj/Debug/net8.0/bfks-projekt.pdb
+/workspaces/projekt-rechnung-sql/bfks-projekt/bin/Debug/net8.0/bfks-projekt
+/workspaces/projekt-rechnung-sql/bfks-projekt/bin/Debug/net8.0/bfks-projekt.deps.json
+/workspaces/projekt-rechnung-sql/bfks-projekt/bin/Debug/net8.0/bfks-projekt.runtimeconfig.json
+/workspaces/projekt-rechnung-sql/bfks-projekt/bin/Debug/net8.0/bfks-projekt.dll
+/workspaces/projekt-rechnung-sql/bfks-projekt/bin/Debug/net8.0/bfks-projekt.pdb
+/workspaces/projekt-rechnung-sql/bfks-projekt/bin/Debug/net8.0/Microsoft.Extensions.DependencyInjection.Abstractions.dll
+/workspaces/projekt-rechnung-sql/bfks-projekt/bin/Debug/net8.0/Microsoft.Extensions.Logging.Abstractions.dll
+/workspaces/projekt-rechnung-sql/bfks-projekt/bin/Debug/net8.0/Npgsql.dll
+/workspaces/projekt-rechnung-sql/bfks-projekt/obj/Debug/net8.0/bfks-pro.3B4BB22A.Up2Date
+/workspaces/projekt-rechnung-sql/bfks-projekt/obj/Debug/net8.0/bfks-projekt.genruntimeconfig.cache
+/workspaces/projekt-rechnung-sql/bfks-projekt/obj/Debug/net8.0/ref/bfks-projekt.dll
+C:\Users\anschulz\OneDrive - adesso Group\Dokumente\Schule\Lehrjahr2\BfK-S\projekt-rechnung-sql\bfks-projekt\bin\Debug\net8.0\bfks-projekt.exe
+C:\Users\anschulz\OneDrive - adesso Group\Dokumente\Schule\Lehrjahr2\BfK-S\projekt-rechnung-sql\bfks-projekt\bin\Debug\net8.0\bfks-projekt.deps.json
+C:\Users\anschulz\OneDrive - adesso Group\Dokumente\Schule\Lehrjahr2\BfK-S\projekt-rechnung-sql\bfks-projekt\bin\Debug\net8.0\bfks-projekt.runtimeconfig.json
+C:\Users\anschulz\OneDrive - adesso Group\Dokumente\Schule\Lehrjahr2\BfK-S\projekt-rechnung-sql\bfks-projekt\bin\Debug\net8.0\bfks-projekt.dll
+C:\Users\anschulz\OneDrive - adesso Group\Dokumente\Schule\Lehrjahr2\BfK-S\projekt-rechnung-sql\bfks-projekt\bin\Debug\net8.0\bfks-projekt.pdb
+C:\Users\anschulz\OneDrive - adesso Group\Dokumente\Schule\Lehrjahr2\BfK-S\projekt-rechnung-sql\bfks-projekt\bin\Debug\net8.0\Microsoft.Extensions.DependencyInjection.Abstractions.dll
+C:\Users\anschulz\OneDrive - adesso Group\Dokumente\Schule\Lehrjahr2\BfK-S\projekt-rechnung-sql\bfks-projekt\bin\Debug\net8.0\Microsoft.Extensions.Logging.Abstractions.dll
+C:\Users\anschulz\OneDrive - adesso Group\Dokumente\Schule\Lehrjahr2\BfK-S\projekt-rechnung-sql\bfks-projekt\bin\Debug\net8.0\Npgsql.dll
+C:\Users\anschulz\OneDrive - adesso Group\Dokumente\Schule\Lehrjahr2\BfK-S\projekt-rechnung-sql\bfks-projekt\obj\Debug\net8.0\bfks-projekt.csproj.AssemblyReference.cache
+C:\Users\anschulz\OneDrive - adesso Group\Dokumente\Schule\Lehrjahr2\BfK-S\projekt-rechnung-sql\bfks-projekt\obj\Debug\net8.0\bfks-projekt.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\anschulz\OneDrive - adesso Group\Dokumente\Schule\Lehrjahr2\BfK-S\projekt-rechnung-sql\bfks-projekt\obj\Debug\net8.0\bfks-projekt.AssemblyInfoInputs.cache
+C:\Users\anschulz\OneDrive - adesso Group\Dokumente\Schule\Lehrjahr2\BfK-S\projekt-rechnung-sql\bfks-projekt\obj\Debug\net8.0\bfks-projekt.AssemblyInfo.cs
+C:\Users\anschulz\OneDrive - adesso Group\Dokumente\Schule\Lehrjahr2\BfK-S\projekt-rechnung-sql\bfks-projekt\obj\Debug\net8.0\bfks-projekt.csproj.CoreCompileInputs.cache
+C:\Users\anschulz\OneDrive - adesso Group\Dokumente\Schule\Lehrjahr2\BfK-S\projekt-rechnung-sql\bfks-projekt\obj\Debug\net8.0\bfks-pro.3B4BB22A.Up2Date
+C:\Users\anschulz\OneDrive - adesso Group\Dokumente\Schule\Lehrjahr2\BfK-S\projekt-rechnung-sql\bfks-projekt\obj\Debug\net8.0\bfks-projekt.dll
+C:\Users\anschulz\OneDrive - adesso Group\Dokumente\Schule\Lehrjahr2\BfK-S\projekt-rechnung-sql\bfks-projekt\obj\Debug\net8.0\refint\bfks-projekt.dll
+C:\Users\anschulz\OneDrive - adesso Group\Dokumente\Schule\Lehrjahr2\BfK-S\projekt-rechnung-sql\bfks-projekt\obj\Debug\net8.0\bfks-projekt.pdb
+C:\Users\anschulz\OneDrive - adesso Group\Dokumente\Schule\Lehrjahr2\BfK-S\projekt-rechnung-sql\bfks-projekt\obj\Debug\net8.0\bfks-projekt.genruntimeconfig.cache
+C:\Users\anschulz\OneDrive - adesso Group\Dokumente\Schule\Lehrjahr2\BfK-S\projekt-rechnung-sql\bfks-projekt\obj\Debug\net8.0\ref\bfks-projekt.dll

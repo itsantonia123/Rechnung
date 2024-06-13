@@ -1,0 +1,12 @@
+{
+  "version": 2,
+  "dgSpecHash": "i7EYBcPXGWA=",
+  "success": true,
+  "projectFilePath": "C:\\Users\\anschulz\\OneDrive - adesso Group\\Dokumente\\Schule\\Lehrjahr2\\BfK-S\\projekt-rechnung-sql\\bfks-projekt\\bfks-projekt.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\anschulz\\.nuget\\packages\\microsoft.extensions.dependencyinjection.abstractions\\8.0.0\\microsoft.extensions.dependencyinjection.abstractions.8.0.0.nupkg.sha512",
+    "C:\\Users\\anschulz\\.nuget\\packages\\microsoft.extensions.logging.abstractions\\8.0.0\\microsoft.extensions.logging.abstractions.8.0.0.nupkg.sha512",
+    "C:\\Users\\anschulz\\.nuget\\packages\\npgsql\\8.0.3\\npgsql.8.0.3.nupkg.sha512"
+  ],
+  "logs": []
+}
