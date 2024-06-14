@@ -1,198 +1,118 @@
-<html>
 
-<body>
-    <table>
-        <style>
-            table {
-                border-collapse: collapse;
-            }
-
-            td {
-                border: 1px solid black;
-                padding: 5px;
-            }
-        </style>
-        <tr>
-            <td>auftragsnr</td>
-            <td>201002001</td>
-        </tr>
-        <tr>
-            <td>Verkäufer</td>
-            <td>
-                <table>
-                    <tr>
-                        <td>verkäuferid</td>
-                        <td>1</td>
-                    </tr>
-                    <tr>
-                        <td>plz</td>
-                        <td>12345</td>
-                    </tr>
-                    <tr>
-                        <td>blz</td>
-                        <td>7712344 </td>
-                    </tr>
-                    <tr>
-                        <td>kontonr</td>
-                        <td>76532xxx </td>
-                    </tr>
-                    <tr>
-                        <td>name1</td>
-                        <td>Winkler AG</td>
-                    </tr>
-                    <tr>
-                        <td>straße</td>
-                        <td>Schulstraße 1</td>
-                    </tr>
-                    <tr>
-                        <td>geschäftsführung</td>
-                        <td>Müller</td>
-                    </tr>
-                    <tr>
-                        <td>amtsgericht</td>
-                        <td>Amtsgericht Karlsbund</td>
-                    </tr>
-                    <tr>
-                        <td>hbr</td>
-                        <td>87xxx</td>
-                    </tr>
-                    <tr>
-                        <td>fax</td>
-                        <td>(+49) xxxx 300701</td>
-                    </tr>
-                    <tr>
-                        <td>telefon</td>
-                        <td>(+49) xxxx 300700</td>
-                    </tr>
-                    <tr>
-                        <td>steuernummer</td>
-                        <td>1425xxxx</td>
-                    </tr>
-                    <tr>
-                        <td>ustidnr</td>
-                        <td>98632xxx</td>
-                    </tr>
-                </table>
-            </td>
-        </tr>
-        <tr>
-            <td>Kunde</td>
-            <td>
-                <table>
-                    <tr>
-                        <td>kundennr</td>
-                        <td>1025637</td>
-                    </tr>
-                    <tr>
-                        <td>plz</td>
-                        <td>34056</td>
-                    </tr>
-                    <tr>
-                        <td>straße</td>
-                        <td>Dinkelstrasse 39</td>
-                    </tr>
-                    <tr>
-                        <td>vorname</td>
-                        <td>Manfred</td>
-                    </tr>
-                    <tr>
-                        <td>nachname</td>
-                        <td>Heller</td>
-                    </tr>
-                </table>
-            </td>
-        </tr>
-        <tr>
-            <td>datum</td>
-            <td>02/20/2019 00:00:00</td>
-        </tr>
-        <tr>
-            <td>fälligkeitsdatum</td>
-            <td>03/20/2010 00:00:00</td>
-        </tr>
-        <tr>
-            <td>bearbeiter</td>
-            <td>Last</td>
-        </tr>
-        <tr>
-            <td>bruttowert</td>
-            <td>550.00</td>
-        </tr>
-        <tr>
-            <td>nettowert</td>
-            <td>462.18</td>
-        </tr>
-        <tr>
-            <td>bestellungsart</td>
-            <td>Online</td>
-        </tr>
-        <tr>
-            <td>zahlungsvermerkung</td>
-            <td>Überweisung</td>
-        </tr>
-        <tr>
-            <td>Position 1</td>
-            <td>
-                <table>
-                    <tr>
-                        <td>positionsid</td>
-                        <td>1</td>
-                    </tr>
-                    <tr>
-                        <td>positionnr</td>
-                        <td>1</td>
-                    </tr>
-                    <tr>
-                        <td>artikelnr</td>
-                        <td>11020351</td>
-                    </tr>
-                    <tr>
-                        <td>auftragsnr</td>
-                        <td>201002001</td>
-                    </tr>
-                    <tr>
-                        <td>menge</td>
-                        <td>4</td>
-                    </tr>
-                    <tr>
-                        <td>gesamtpreis</td>
-                        <td>160.00</td>
-                    </tr>
-                </table>
-            </td>
-        </tr>
-        <tr>
-            <td>Position 2</td>
-            <td>
-                <table>
-                    <tr>
-                        <td>positionsid</td>
-                        <td>2</td>
-                    </tr>
-                    <tr>
-                        <td>positionnr</td>
-                        <td>2</td>
-                    </tr>
-                    <tr>
-                        <td>artikelnr</td>
-                        <td>11020346</td>
-                    </tr>
-                    <tr>
-                        <td>auftragsnr</td>
-                        <td>201002001</td>
-                    </tr>
-                    <tr>
-                        <td>menge</td>
-                        <td>2</td>
-                    </tr>
-                    <tr>
-                        <td>gesamtpreis</td>
-                        <td>390.00</td>
-                    </tr>
-                </table>
-            </td>
-        </tr>
-    </table>
-</body>
-
-</html>
+    <!DOCTYPE html>
+    <html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>Rechnung</title>
+        
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+        }
+        .header, .footer {
+            text-align: left;
+            margin-bottom: 20px;
+        }
+        .header img {
+            float: left;
+            margin-right: 20px;
+        }
+        .header h1 {
+            margin: 0;
+        }
+        .header .details {
+            float: right;
+            text-align: right;
+        }
+        .clear {
+            clear: both;
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 20px;
+        }
+        table, th, td {
+            border: 1px solid black;
+        }
+        th, td {
+            padding: 8px;
+            text-align: left;
+        }
+        .no-border {
+            border: none;
+        }
+    </style>
+    </head>
+    <body>
+        <div class="header">
+            <img src="logo.png" alt="Company Logo" width="100">
+            <div class="details">
+                <p>Winkler KG, Schulstr.11, 12345 Neuheim</p>
+                <p>An: Manfred Heller<br>
+                Dinkelstrasse 39<br>
+                34056 Mauerbach</p>
+            </div>
+            <div class="clear"></div>
+            <h1>Rechnung</h1>
+        </div>
+        <table>
+            <tr>
+                <td class="no-border">Auftrags Nr. <strong>201002001</strong></td>
+                <td class="no-border">Kunden Nr. <strong>1025637</strong></td>
+                <td class="no-border">Datum <strong>02/20/2019 00:00:00</strong></td>
+                <td class="no-border">Bearbeiter <strong>Last</strong></td>
+            </tr>
+        </table>
+        <table>
+            <thead>
+                <tr>
+                    <th>Pos. Nr.</th>
+                    <th>Artikel Nr.</th>
+                    <th>Artikel</th>
+                    <th>Menge</th>
+                    <th>Einzelpreis</th>
+                    <th>Gesamtpreis</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>1</td>
+                    <td>11020351</td>
+                    <td>bezeichnung</td>
+                    <td>4</td>
+                    <td>40 €</td>
+                    <td>160.00 €</td>
+                </tr>
+                <tr>
+                    <td>2</td>
+                    <td>11020346</td>
+                    <td>bezeichnung</td>
+                    <td>2</td>
+                    <td>40 €</td>
+                    <td>390.00 €</td>
+                </tr>
+            </tbody>
+            <tfoot>
+                <tr>
+                    <td colspan="4" class="no-border"></td>
+                    <td>Netto-Betrag</td>
+                    <td>462.18 €</td>
+                </tr>
+                <tr>
+                    <td colspan="4" class="no-border"></td>
+                    <td>19% MwSt</td>
+                    <td>19% €</td>
+                </tr>
+                <tr>
+                    <td colspan="4" class="no-border"></td>
+                    <td><strong>Gesamt-Betrag</strong></td>
+                    <td><strong>550.00 €</strong></td>
+                </tr>
+            </tfoot>
+        </table>
+        <p>Wir danken für Ihren Einkauf</p>
+        <p>Zahlungsvermerk: Überweisung<br>Zahlbar bis 03/20/2010 00:00:00</p>
+    </body>
+    </html>

@@ -20,12 +20,12 @@ class Program
 
     static void InitTables()
     {
-        RunFromFile("sql-cmds/inittables.sql");
+        RunFromFile("sql-cmds/init.sql");
     }
 
     static void InsertSampleData()
     {
-        RunFromFile("sql-cmds/sampledata.sql");
+        RunFromFile("sql-cmds/sample.sql");
     }
     static Dictionary<string, Dictionary<string, object>> GetPositionen(int auftragsNr)
     {
@@ -119,21 +119,34 @@ class Program
         return artikelName;
     }
 
-    static char GetKontoNr(int verkaeuferId)
+    static Dictionary<string, Dictionary<string, object>> GetVerkaeufer(int verkaeuferId)
     {
         var conn = new NpgsqlConnection(connectionString);
         conn.Open();
 
-        var cmd = new NpgsqlCommand("SELECT kontonr FROM artikel WHERE " + verkaeuferId + " = @verkaeuferid", conn);
+        var cmd = new NpgsqlCommand("SELECT * FROM position WHERE " + verkaeuferId + " = @verkaeuferid", conn);
         cmd.Parameters.AddWithValue("verkaeuferid", verkaeuferId);
 
+        var dict = new Dictionary<string, Dictionary<string, object>>();
+
         var reader = cmd.ExecuteReader();
-        
-        char kontoNr = reader.GetChar(0);
+        var enumerator = reader.GetEnumerator();
+        while (enumerator.MoveNext())
+        {
+            //reader.Read();
+            var subdict = new Dictionary<string, object>();
+            for (int i = 0; i < reader.FieldCount; i++)
+            {
+                var name = reader.GetName(i);
+                var value = reader.GetValue(i);
+
+                subdict.Add(name, value);
+            }
+        }
 
         conn.Close();
 
-        return kontoNr;
+        return dict;
     }
 
     static void RunFromFile(string filePath)
@@ -151,7 +164,6 @@ class Program
         conn.Close();
     }
 
-
     static void ShowAuftragHtml(int auftragsNr)
     {
         var conn = new NpgsqlConnection(connectionString);
@@ -161,97 +173,96 @@ class Program
         
         // CSS styles
         string style = @"
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            margin: 20px;
-        }
-        .header, .footer {
-            text-align: left;
-            margin-bottom: 20px;
-        }
-        .header img {
-            float: left;
-            margin-right: 20px;
-        }
-        .header h1 {
-            margin: 0;
-        }
-        .header .details {
-            float: right;
-            text-align: right;
-        }
-        .clear {
-            clear: both;
-        }
-        table {
-            width: 100%;
-            border-collapse: collapse;
-            margin-top: 20px;
-        }
-        table, th, td {
-            border: 1px solid black;
-        }
-        th, td {
-            padding: 8px;
-            text-align: left;
-        }
-        .no-border {
-            border: none;
-        }
-    </style>";
+            <style>
+                body {
+                    font-family: Arial, sans-serif;
+                    margin: 20px;
+                }
+                .header, .footer {
+                    text-align: left;
+                    margin-bottom: 20px;
+                }
+                .header img {
+                    float: left;
+                    margin-right: 20px;
+                }
+                .header h1 {
+                    margin: 0;
+                }
+                .header .details {
+                    float: right;
+                    text-align: right;
+                }
+                .clear {
+                    clear: both;
+                }
+                table {
+                    width: 100%;
+                    border-collapse: collapse;
+                    margin-top: 20px;
+                }
+                table, th, td {
+                    border: 1px solid black;
+                }
+                th, td {
+                    padding: 8px;
+                    text-align: left;
+                }
+                .no-border {
+                    border: none;
+                }
+            </style>";
 
-        // Start building HTML
-        string html = $@"
-    <!DOCTYPE html>
-    <html lang=""en"">
-    <head>
-        <meta charset=""UTF-8"">
-        <title>Rechnung</title>
-        {style}
-    </head>
-    <body>";
+            // Start building HTML
+            string html = $@"
+            <!DOCTYPE html>
+            <html lang=""en"">
+            <head>
+                <meta charset=""UTF-8"">
+                <title>Rechnung</title>
+                {style}
+            </head>
+            <body>";
 
-        // Build header
-        html += @"
-        <div class=""header"">
-            <img src=""logo.png"" alt=""Company Logo"" width=""100"">
-            <div class=""details"">
-                <p>Winkler KG, Schulstr.11, 12345 Neuheim</p>
-                <p>An: Manfred Heller<br>
-                Dinkelstrasse 39<br>
-                34056 Mauerbach</p>
-            </div>
-            <div class=""clear""></div>
-            <h1>Rechnung</h1>
-        </div>";
+            // Build header
+            html += @"
+            <div class=""header"">
+                <img src=""logo.png"" alt=""Company Logo"" width=""100"">
+                <div class=""details"">
+                    <p>Winkler KG, Schulstr.11, 12345 Neuheim</p>
+                    <p>An: Manfred Heller<br>
+                    Dinkelstrasse 39<br>
+                    34056 Mauerbach</p>
+                </div>
+                <div class=""clear""></div>
+                <h1>Rechnung</h1>
+            </div>";
 
-        // Build main content table
-        html += @"
-        <table>
-            <tr>
-                <td class=""no-border"">Auftrags Nr. <strong>" + auftragsNr + @"</strong></td>
-                <td class=""no-border"">Kunden Nr. <strong>" + rechnung["kundennr"] + @"</strong></td>
-                <td class=""no-border"">Datum <strong>" + rechnung["datum"] + @"</strong></td>
-                <td class=""no-border"">Bearbeiter <strong>" + rechnung["bearbeiter"] + @"</strong></td>
-            </tr>
-        </table>";
-
-        // Build position table
-        var positionen = GetPositionen(auftragsNr);
-        //var artikelNr = positionen["artikelnr"];
-        html += @"
-        <table>
-            <thead>
+            // Build main content table
+            html += @"
+            <table>
                 <tr>
-                    <th>Pos. Nr.</th>
-                    <th>Artikel Nr.</th>
-                    <th>Artikel</th>
-                    <th>Menge</th>
-                    <th>Einzelpreis</th>
-                    <th>Gesamtpreis</th>
+                    <td class=""no-border"">Auftrags Nr. <strong>" + auftragsNr + @"</strong></td>
+                    <td class=""no-border"">Kunden Nr. <strong>" + rechnung["kundennr"] + @"</strong></td>
+                    <td class=""no-border"">Datum <strong>" + rechnung["datum"] + @"</strong></td>
+                    <td class=""no-border"">Bearbeiter <strong>" + rechnung["bearbeiter"] + @"</strong></td>
                 </tr>
-            </thead>
+            </table>";
+
+            // Build position table
+            var positionen = GetPositionen(auftragsNr);
+            html += @"
+            <table>
+                <thead>
+                    <tr>
+                        <th>Pos. Nr.</th>
+                        <th>Artikel Nr.</th>
+                        <th>Artikel</th>
+                        <th>Menge</th>
+                        <th>Einzelpreis</th>
+                        <th>Gesamtpreis</th>
+                    </tr>
+                </thead>
             <tbody>";
 
 
@@ -288,7 +299,7 @@ class Program
                 <tr>
                     <td colspan=""4"" class=""no-border""></td>
                     <td>19% MwSt</td>
-                    <td>" + mwst + @" €</td>
+                    <td>" + mwst + @" </td>
                 </tr>
                 <tr>
                     <td colspan=""4"" class=""no-border""></td>
@@ -304,19 +315,27 @@ class Program
         <p>Zahlungsvermerk: " + rechnung["zahlungsvermerkung"] + @"<br>Zahlbar bis " + rechnung["fälligkeitsdatum"] + @"</p>";
 
         // Build footer
-        foreach (var positionKvp in positionen)
+        int verkaeuferId = (int)rechnung["verkaeuferid"];
+        var verkaeufer = GetVerkaeufer(verkaeuferId);
+        
+        foreach (var verkaeuferKvp in verkaeufer)
         {
-            int verkaeuferId = (int)positionKvp.Value["verkäuferid"];
-            char kontoNr = GetKontoNr(verkaeuferId);
-            html += @"
-            <div class=""footer"">
-                <p>Bankname: Deutsche Bank<br>Konto: " + kontoNr + @"<br>BLZ: " + rechnung["blz"] + @"<br>Steuernummer: " + rechnung["steuernummer"] + @"<br>US-ID-Nr: " + rechnung["ustidnr"] + @"<br>Amtsgericht " + rechnung["amtsgericht"] + @"<br>HBR " + rechnung["hbr"] + @"<br>Firmensitz: Neuheim<br>" + rechnung["straße"] + @", 75175 Neuheim<br>Tel.: " + rechnung["telefon"] + @"<br>Fax: " + rechnung["fax"] + @"<br>Geschäftsführung: " + rechnung["geschäftsführung"] + @"</p>
-            </div>";
-        }
+            var verkaeuferKey = verkaeuferKvp.Key;
+            int artikelnummer = (int)verkaeuferKvp.Value["artikelnr"];
+            var menge = verkaeuferKvp.Value["menge"];
+            var gesamtpreis = verkaeuferKvp.Value["gesamtpreis"];
+            String artikelname = GetArtikelname(artikelnummer);
+            double einzelpreis = GetEinzelpreis(artikelnummer);
+            
+        html += @"
+        <div class=""footer"">
+            <p>Bankname: Deutsche Bank<br>Konto: " + verkaeufer["kontonr"] + @"<br>BLZ: " + verkaeufer["blz"] + @"<br>Steuernummer: " + verkaeufer["steuernummer"] + @"<br>US-ID-Nr: " + verkaeufer["ustidnr"] + @"<br>Amtsgericht " + verkaeufer["amtsgericht"] + @"<br>HBR " + verkaeufer["hbr"] + @"<br>Firmensitz: Neuheim<br>" + verkaeufer["straße"] + @", 75175 Neuheim<br>Tel.: " + verkaeufer["telefon"] + @"<br>Fax: " + verkaeufer["fax"] + @"<br>Geschäftsführung: " + verkaeufer["geschäftsführung"] + @"</p>
+        </div>";
+        }        
 
         html += @"
-    </body>
-    </html>";
+        </body>
+        </html>";
 
         System.IO.File.WriteAllText("auftrag.html", html);
 

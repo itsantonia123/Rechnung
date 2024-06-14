@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("bfks-projekt")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+457d2a8320f4c5dda8251e4a65afc6aa9976977d")]
 [assembly: System.Reflection.AssemblyProductAttribute("bfks-projekt")]
 [assembly: System.Reflection.AssemblyTitleAttribute("bfks-projekt")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
